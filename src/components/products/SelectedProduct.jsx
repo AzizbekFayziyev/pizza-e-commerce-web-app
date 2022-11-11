@@ -1,5 +1,5 @@
 import { Toast } from 'bootstrap';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FiArrowLeftCircle, FiShoppingCart } from 'react-icons/fi';
 import { useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
@@ -20,6 +20,14 @@ export default function SelectedProduct() {
     dispatch(productToCart(product));
     toast.info(`"${id}" savatchaga qo'shildi`);
   };
+  // Scroll to top
+
+  useEffect(() => {
+    window.scrollTo({
+      left: 0,
+      top: 0,
+    });
+  }, [id])
 
   return (
     <>

@@ -634,12 +634,9 @@ body {
         font-size: 12px;
     }
 
-    .title {
-        margin: 8px auto;
-    }
-
     .menu {
         padding: 0;
+        margin: 0;
 
         .nav {
             flex-wrap: nowrap;
@@ -647,12 +644,21 @@ body {
         }
 
         i {
-            margin: 3px;
+            margin: 0;
         }
     }
 
-    .header .slider {
-        height: 240px;
+    .header {
+        margin: 0;
+
+        .slider {
+            height: 200px;
+
+            img {
+                padding: 0;
+                margin: 0;
+            }
+        }
     }
 
     .card .card-text {
